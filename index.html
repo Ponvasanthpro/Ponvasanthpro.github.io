@@ -1,5 +1,53 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Offer</title>
+    <style>
+        #survey-banner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff5733;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
 <body>
-<a href="https://kexithakreemtou.com/link?z=9156860&var={SOURCE_ID}&ymid={CLICK_ID}">click</a>
+
+    <!-- Survey Offer Banner -->
+    <div id="survey-banner" onclick="redirectToSurvey()">
+        🎯 Take a Fun Survey & Discover Something New! 🚀
+    </div>
+
+    <script>
+        // Zeydoo Tracking Link (Replace with your actual tracking link)
+        const zeydooSurveyLink = "https://kexithakreemtou.com/link?z=9156860&var={SOURCE_ID}&ymid={CLICK_ID}"; 
+
+        function redirectToSurvey() {
+            window.open(zeydooSurveyLink, "_blank");
+        }
+
+        // Show the banner after 10 seconds (Encourages engagement)
+        setTimeout(() => {
+            document.getElementById("survey-banner").style.display = "block";
+        }, 0);
+    </script>
+
 </body>
 </html>
+
